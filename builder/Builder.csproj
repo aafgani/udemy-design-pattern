@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <Folder Include="FunctionalBuilder\" />
-    <Folder Include="StepwiseBuilder\" />
   </ItemGroup>
 
   <ItemGroup>

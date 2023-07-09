@@ -1,4 +1,6 @@
 ﻿using Builder.FluentBuilder;
+using Builder.StepwiseBuilder;
+using domain.Entity;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
@@ -22,12 +24,23 @@ namespace builder
         {
             logger.LogInformation("Started");
 
+            #region FluentBuilder
             var person = BuildPerson.New
                 .Called("Andrya")
                 .WorksAsA("Software Engineer")
                 .Build();
 
             logger.LogInformation(person.ToString());
+            #endregion
+
+            #region Stepwise builder
+            var car = CarBuilder.Create()
+                .OfType(CarType.Sedan)
+                .WithWeels(10)
+                .Build();
+
+            logger.LogInformation(car.ToString());
+            #endregion
 
             return Task.CompletedTask;
         }
