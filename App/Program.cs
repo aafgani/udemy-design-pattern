@@ -9,7 +9,8 @@ namespace App
         {
             Host.CreateDefaultBuilder()
                 .ConfigureServices((context, services) =>
-                {                  
+                {
+                    services.AddHostedServices();
                 })
                 .ConfigureLogging(logging =>
                 {
