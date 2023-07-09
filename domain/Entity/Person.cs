@@ -1,4 +1,4 @@
-﻿namespace domain
+﻿namespace domain.Entity
 {
     public class Person
     {
