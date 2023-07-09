@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="FunctionalBuilder\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\domain\domain.csproj" />
   </ItemGroup>
 

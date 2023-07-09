@@ -1,4 +1,5 @@
 ﻿using Builder.FluentBuilder;
+using Builder.FunctionalBuilder;
 using Builder.StepwiseBuilder;
 using domain.Entity;
 using Microsoft.Extensions.Hosting;
@@ -40,6 +41,16 @@ namespace builder
                 .Build();
 
             logger.LogInformation(car.ToString());
+            #endregion
+
+            #region functional builder
+            var book = new BookBuilder()
+                .Titled("Novelku")
+                .AuthoredBy("Andrya")
+                .ReleaseYear(2023)
+                .Build();
+
+            logger.LogInformation(book.ToString());
             #endregion
 
             return Task.CompletedTask;
